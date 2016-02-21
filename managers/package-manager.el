@@ -14,7 +14,8 @@
 	expand-region
 	elpy
 	helm
-	magit))
+	magit
+	elfeed))
 
 (defun ensure-all-my-packages-are-installed ()
   (message "Checking for not installed packages...")
