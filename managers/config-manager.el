@@ -1,6 +1,6 @@
 (defun ensure-primary-config-is-set ()
   (setq inhibit-startup-message t)
-  (global-set-key (kbd "s-<f11>") 'toggle-frame-fullscreen)
+  (global-set-key (kbd "C-c e") 'eval-region)
   (global-set-key (kbd "s-+") 'text-scale-increase)
   (global-set-key (kbd "s-_") 'text-scale-decrease)
   (global-linum-mode 1)
