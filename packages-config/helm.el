@@ -17,10 +17,10 @@
 (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action)
 (define-key helm-map (kbd "C-z")  'helm-select-action)
 
-(define-key global-map [remap list-buffers] 'helm-buffers-list)
-(define-key global-map [remap dabbrev-expand] 'helm-dabbrev)
-(define-key global-map [remap find-file] 'helm-find-files)
-(define-key global-map [remap occur] 'helm-occur)
+(global-set-key (kbd "C-x C-b") 'helm-buffers-list)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+(global-set-key (kbd "M-s o") 'helm-occur)
+(global-set-key (kbd "M-/") 'helm-dabbrev)
 
 (global-set-key (kbd "C-c h") 'helm-command-prefix)
 (global-set-key (kbd "C-c h g") 'helm-google-suggest)
@@ -30,8 +30,15 @@
 
 (global-unset-key (kbd "C-x c"))
 
+(setq personal-helm-faces-mid-white "#F8F8F0"
+      personal-helm-faces-dark-blue "#AEC2E0")
+
 (set-face-attribute 'helm-selection nil
-                    :background "#F8F8F0"
-                    :foreground "AEC2E0")
+                    :background personal-helm-faces-mid-white
+                    :foreground personal-helm-faces-dark-blue)
+
+(set-face-attribute 'helm-candidate-number nil
+		    :background personal-helm-faces-mid-white
+		    :foreground personal-helm-faces-dark-blue)
 
 (helm-mode 1)
