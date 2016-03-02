@@ -15,7 +15,8 @@
 	elpy
 	helm
 	magit
-	elfeed))
+	elfeed
+	exec-path-from-shell))
 
 (defun ensure-all-my-packages-are-installed ()
   (message "Checking for not installed packages...")
