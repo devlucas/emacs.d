@@ -12,11 +12,11 @@
 	move-text
 	multiple-cursors
 	expand-region
-	elpy
 	helm
 	magit
 	elfeed
-	exec-path-from-shell))
+	exec-path-from-shell
+	anaconda-mode))
 
 (defun ensure-all-my-packages-are-installed ()
   (message "Checking for not installed packages...")
