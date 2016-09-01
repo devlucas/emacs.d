@@ -3,9 +3,22 @@
 
 (setq mc/cmds-to-run-for-all
       '(
-	indent-for-tab-command
-	))
+        downcase-region
+        electric-newline-and-maybe-indent
+        helm-M-x
+        helm-mini
+        helm-show-kill-ring
+        indent-for-tab-command
+        js2-mode-toggle-element
+        kill-region
+        org-force-self-insert
+        orgtbl-self-insert-command
+        upcase-region
+        ))
 
 (setq mc/cmds-to-run-once
       '(
-	))
+        helm-buffers-list
+        helm-projectile-find-file
+        orgtbl-hijacker-command-102
+        ))
