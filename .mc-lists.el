@@ -3,8 +3,10 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        beginning-of-buffer
         downcase-region
         electric-newline-and-maybe-indent
+        end-of-buffer
         helm-M-x
         helm-mini
         helm-show-kill-ring
@@ -21,4 +23,5 @@
         helm-buffers-list
         helm-projectile-find-file
         orgtbl-hijacker-command-102
+        rng-next-error
         ))
