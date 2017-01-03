@@ -1,3 +1,5 @@
+(server-start)
+
 (add-to-list 'load-path "~/.emacs.d/managers")
 (load "package-manager.el")
 (load "config-manager.el")

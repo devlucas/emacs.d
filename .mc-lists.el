@@ -13,6 +13,8 @@
         indent-for-tab-command
         js2-mode-toggle-element
         kill-region
+        move-text-down
+        move-text-up
         org-force-self-insert
         orgtbl-self-insert-command
         upcase-region
