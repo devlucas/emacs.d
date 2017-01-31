@@ -4,6 +4,7 @@
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/") t)
 (package-initialize)
+(package-refresh-contents)
 
 (setq my-packages
       '(sublime-themes
@@ -44,8 +45,8 @@
 
   (dolist (p my-packages)
     (when (not (package-installed-p p))
-      (message p " will be installed...")
+      (message "installing " p)
       (package-install p)
-      (message p " was sucessful installed!")))
+      (message "installed " p)))
 
   (message "All your packages are installed!"))
