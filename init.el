@@ -18,8 +18,11 @@
  '(js2-mode-show-strict-warnings nil)
  '(package-selected-packages
    (quote
-    (wrap-region goto-chg avy persistent-scratch f s use-package web-mode sass-mode markdown-mode elpy feature-mode js2-mode rvm robe racer yaml-mode exec-path-from-shell elfeed magit editorconfig flycheck-rust flycheck company-anaconda company-racer company helm-robe helm-projectile projectile helm expand-region multiple-cursors move-text undo-tree powerline sublime-themes)))
- '(safe-local-variable-values (quote ((encoding . utf-8)))))
+    (meghanada rc-mode wrap-region goto-chg avy persistent-scratch f s use-package web-mode sass-mode markdown-mode elpy feature-mode js2-mode rvm robe racer yaml-mode exec-path-from-shell elfeed magit editorconfig flycheck-rust flycheck company-anaconda company-racer company helm-robe helm-projectile projectile helm expand-region multiple-cursors move-text undo-tree powerline sublime-themes)))
+ '(safe-local-variable-values (quote ((encoding . utf-8))))
+ '(send-mail-function (quote smtpmail-send-it))
+ '(smtpmail-smtp-server "smtp.gmail.com")
+ '(smtpmail-smtp-service 587))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

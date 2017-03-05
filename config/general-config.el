@@ -40,6 +40,10 @@
   :init
   (add-hook 'js2-mode-hook 'flycheck-mode))
 
+(use-package elpy
+  :init
+  (add-hook 'python-mode-hook 'elpy-mode))
+
 (use-package magit
   :bind ("C-c s" . magit-status))
 
@@ -83,3 +87,10 @@
 (use-package wrap-region
   :config
   (wrap-region-global-mode 1))
+
+(use-package meghanada
+  :init
+  (add-hook 'java-mode-hook
+            (lambda ()
+              (meghanada-mode t)
+              (add-hook 'before-save-hook 'meghanada-code-beautify-before-save))))
