@@ -38,7 +38,11 @@
   :mode "\\.js\\'"
   :interpreter "node"
   :init
-  (add-hook 'js2-mode-hook 'flycheck-mode))
+  (add-hook 'js2-mode-hook 'flycheck-mode)
+  :config
+  (setq-default indent-tabs-mode nil)
+  (setq-default js2-basic-offset 2)
+  (flycheck-select-checker 'javascript-standard))
 
 (use-package elpy
   :init
