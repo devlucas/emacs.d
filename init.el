@@ -13,16 +13,20 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("58c6711a3b568437bab07a30385d34aacf64156cc5137ea20e799984f4227265" "9b59e147dbbde5e638ea1cde5ec0a358d5f269d27bd2b893a0947c4a867e14c1" default)))
  '(js2-highlight-level 3)
  '(js2-mode-show-parse-errors nil)
  '(js2-mode-show-strict-warnings nil)
  '(package-selected-packages
    (quote
-    (meghanada rc-mode wrap-region goto-chg avy persistent-scratch f s use-package web-mode sass-mode markdown-mode elpy feature-mode js2-mode rvm robe racer yaml-mode exec-path-from-shell elfeed magit editorconfig flycheck-rust flycheck company-anaconda company-racer company helm-robe helm-projectile projectile helm expand-region multiple-cursors move-text undo-tree powerline sublime-themes)))
+    (prodigy typescript-mode kotlin-mode flycheck-kotlin groovy-mode gradle-mode helm-ag dockerfile-mode nginx-mode add-node-modules-path vue-mode meghanada rc-mode wrap-region goto-chg avy persistent-scratch f s use-package web-mode sass-mode markdown-mode elpy feature-mode js2-mode rvm robe racer yaml-mode exec-path-from-shell elfeed magit editorconfig flycheck-rust flycheck company-anaconda company-racer company helm-robe helm-projectile projectile helm expand-region multiple-cursors move-text undo-tree powerline sublime-themes)))
  '(safe-local-variable-values (quote ((encoding . utf-8))))
  '(send-mail-function (quote smtpmail-send-it))
  '(smtpmail-smtp-server "smtp.gmail.com")
- '(smtpmail-smtp-service 587))
+ '(smtpmail-smtp-service 587)
+ '(typescript-indent-level 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -43,6 +47,7 @@
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
 (global-set-key (kbd "s-+") 'text-scale-increase)
 (global-set-key (kbd "s-_") 'text-scale-decrease)
+(global-set-key (kbd "s-s") 'isearch-forward-symbol-at-point)
 
 (setq echo-keystrokes 0.1) ;; shows keystrokes early
 (setq inhibit-startup-message t) ;; disables default startup message

@@ -7,6 +7,7 @@
   (powerline-default-theme))
 
 (use-package expand-region
+  :bind ("s-x" . clipboard-kill-region)
   :bind ("C-w" . er/expand-region)
   :bind ("C-S-w" . er/contract-region))
 
@@ -34,15 +35,25 @@
   :config
   (global-flycheck-mode -1))
 
+(defun my/setup-node-path-and-flycheck-eslint ()
+  (add-hook 'js2-mode-hook #'add-node-modules-path)
+  (add-hook 'js2-mode-hook #'flycheck-mode))
+
 (use-package js2-mode
   :mode "\\.js\\'"
   :interpreter "node"
-  :init
-  (add-hook 'js2-mode-hook 'flycheck-mode)
   :config
+  (eval-after-load 'js2-mode
+    '(my/setup-node-path-and-flycheck-eslint))
   (setq-default indent-tabs-mode nil)
-  (setq-default js2-basic-offset 2)
-  (flycheck-select-checker 'javascript-standard))
+  (setq-default js2-basic-offset 2))
+
+(use-package kotlin-mode
+  :mode "\\.kt\\'"
+  :config
+  (add-hook 'kotlin-mode-hook #'flycheck-mode)
+  (flycheck-kotlin-setup)
+  (setq-default kotlin-tab-width 4))
 
 (use-package elpy
   :init
@@ -72,7 +83,7 @@
   (global-undo-tree-mode 1))
 
 (use-package web-mode
-  :mode "\\.html?\\'")
+  :mode ("\\.html?\\'" "\\.vue$"))
 
 (use-package yaml-mode
   :mode "\\.yml$")
@@ -98,3 +109,7 @@
             (lambda ()
               (meghanada-mode t)
               (add-hook 'before-save-hook 'meghanada-code-beautify-before-save))))
+
+;; (use-package prodigy
+;;   :init
+;;   (mapc 'load-file (file-expand-wildcards "~/.emacs.d/prodigy-services.el")))

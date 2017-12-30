@@ -3,7 +3,10 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        avy-goto-word-1
         beginning-of-buffer
+        c-indent-line-or-region
+        clipboard-kill-region
         downcase-region
         electric-newline-and-maybe-indent
         end-of-buffer
@@ -13,17 +16,23 @@
         indent-for-tab-command
         js2-mode-toggle-element
         kill-region
+        mouse-drag-vertical-line
         move-text-down
         move-text-up
+        org-beginning-of-line
+        org-end-of-line
         org-force-self-insert
+        org-kill-line
+        org-self-insert-command
+        org-yank
         orgtbl-self-insert-command
+        typescript-insert-and-indent
+        undo-tree-visualize
         upcase-region
+        yaml-electric-backspace
+        yaml-electric-dash-and-dot
         ))
 
 (setq mc/cmds-to-run-once
       '(
-        helm-buffers-list
-        helm-projectile-find-file
-        orgtbl-hijacker-command-102
-        rng-next-error
         ))
