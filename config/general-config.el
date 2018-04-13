@@ -48,6 +48,13 @@
   (setq-default indent-tabs-mode nil)
   (setq-default js2-basic-offset 2))
 
+(use-package elixir-mode
+  :mode "\\.ex\\'")
+
+(use-package realgud)
+
+(use-package realgud-byebug)
+
 (use-package kotlin-mode
   :mode "\\.kt\\'"
   :config

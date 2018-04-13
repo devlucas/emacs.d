@@ -16,13 +16,17 @@
         indent-for-tab-command
         js2-mode-toggle-element
         kill-region
+        markdown-cycle
+        markdown-outdent-or-delete
         mouse-drag-vertical-line
         move-text-down
         move-text-up
         org-beginning-of-line
+        org-cycle
         org-end-of-line
         org-force-self-insert
         org-kill-line
+        org-return-indent
         org-self-insert-command
         org-yank
         orgtbl-self-insert-command
@@ -35,4 +39,5 @@
 
 (setq mc/cmds-to-run-once
       '(
+        help-for-help
         ))

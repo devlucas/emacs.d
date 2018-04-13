@@ -21,7 +21,7 @@
  '(js2-mode-show-strict-warnings nil)
  '(package-selected-packages
    (quote
-    (prodigy typescript-mode kotlin-mode flycheck-kotlin groovy-mode gradle-mode helm-ag dockerfile-mode nginx-mode add-node-modules-path vue-mode meghanada rc-mode wrap-region goto-chg avy persistent-scratch f s use-package web-mode sass-mode markdown-mode elpy feature-mode js2-mode rvm robe racer yaml-mode exec-path-from-shell elfeed magit editorconfig flycheck-rust flycheck company-anaconda company-racer company helm-robe helm-projectile projectile helm expand-region multiple-cursors move-text undo-tree powerline sublime-themes)))
+    (realgud-byebug realgud flycheck-elixir elixir-mode prodigy typescript-mode kotlin-mode flycheck-kotlin groovy-mode gradle-mode helm-ag dockerfile-mode nginx-mode add-node-modules-path vue-mode meghanada rc-mode wrap-region goto-chg avy persistent-scratch f s use-package web-mode sass-mode markdown-mode elpy feature-mode js2-mode rvm robe racer yaml-mode exec-path-from-shell elfeed magit editorconfig flycheck-rust flycheck company-anaconda company-racer company helm-robe helm-projectile projectile helm expand-region multiple-cursors move-text undo-tree powerline sublime-themes)))
  '(safe-local-variable-values (quote ((encoding . utf-8))))
  '(send-mail-function (quote smtpmail-send-it))
  '(smtpmail-smtp-server "smtp.gmail.com")
@@ -48,6 +48,7 @@
 (global-set-key (kbd "s-+") 'text-scale-increase)
 (global-set-key (kbd "s-_") 'text-scale-decrease)
 (global-set-key (kbd "s-s") 'isearch-forward-symbol-at-point)
+(global-set-key (kbd "C-c c") 'quick-calc)
 
 (setq echo-keystrokes 0.1) ;; shows keystrokes early
 (setq inhibit-startup-message t) ;; disables default startup message
