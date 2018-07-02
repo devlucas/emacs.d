@@ -110,13 +110,28 @@
   :config
   (wrap-region-global-mode 1))
 
-(use-package meghanada
-  :init
-  (add-hook 'java-mode-hook
-            (lambda ()
-              (meghanada-mode t)
-              (add-hook 'before-save-hook 'meghanada-code-beautify-before-save))))
+;; (use-package meghanada
+;;   :init
+;;   (add-hook 'java-mode-hook
+;;             (lambda ()
+;;               (meghanada-mode t)
+;;               (add-hook 'before-save-hook 'meghanada-code-beautify-before-save))))
 
 ;; (use-package prodigy
 ;;   :init
 ;;   (mapc 'load-file (file-expand-wildcards "~/.emacs.d/prodigy-services.el")))
+
+
+(unless window-system
+  (when (getenv "DISPLAY")
+    (defun xclip-cut-function (text &optional push)
+      (with-temp-buffer
+        (insert text)
+        (call-process-region (point-min) (point-max) "xclip" nil 0 nil "-i" "-selection" "clipboard")))
+    (defun xclip-paste-function()
+      (let ((xclip-output (shell-command-to-string "xclip -o -selection clipboard")))
+        (unless (string= (car kill-ring) xclip-output)
+          xclip-output )))
+    (setq interprogram-cut-function 'xclip-cut-function)
+    (setq interprogram-paste-function 'xclip-paste-function)
+    ))

@@ -49,6 +49,7 @@
 (global-set-key (kbd "s-_") 'text-scale-decrease)
 (global-set-key (kbd "s-s") 'isearch-forward-symbol-at-point)
 (global-set-key (kbd "C-c c") 'quick-calc)
+(global-set-key (kbd "C-S-c r") 'revert-buffer)
 
 (setq echo-keystrokes 0.1) ;; shows keystrokes early
 (setq inhibit-startup-message t) ;; disables default startup message
