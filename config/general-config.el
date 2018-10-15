@@ -1,6 +1,6 @@
 (use-package sublime-themes
   :config
-  (load-theme 'fogus t))
+  (load-theme 'hickey t))
 
 (use-package powerline
   :config
@@ -74,10 +74,10 @@
          ("M-n" . move-text-down)))
 
 (use-package multiple-cursors
-  :bind(("C-S-c e" . mc/edit-lines)
-        ("C-S-c n" . mc/mark-next-like-this)
-        ("C-S-c p" . mc/mark-previous-like-this)
-        ("C-S-c a" . mc/mark-all-like-this)))
+  :bind(("C-x n e" . mc/edit-lines)
+        ("C-x n n" . mc/mark-next-like-this)
+        ("C-x n p" . mc/mark-previous-like-this)
+        ("C-x n a" . mc/mark-all-like-this)))
 
 (use-package projectile
   :config

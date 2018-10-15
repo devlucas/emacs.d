@@ -11,6 +11,7 @@
         electric-newline-and-maybe-indent
         end-of-buffer
         helm-M-x
+        helm-ag--mark-line-deleted
         helm-mini
         helm-show-kill-ring
         indent-for-tab-command
@@ -31,6 +32,7 @@
         org-yank
         orgtbl-self-insert-command
         typescript-insert-and-indent
+        undefined
         undo-tree-visualize
         upcase-region
         yaml-electric-backspace
@@ -39,5 +41,6 @@
 
 (setq mc/cmds-to-run-once
       '(
+        calc-dispatch
         help-for-help
         ))
