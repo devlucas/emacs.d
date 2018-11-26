@@ -82,8 +82,9 @@
 (use-package projectile
   :config
   (require 'helm-projectile)
-  (projectile-global-mode 1)
-  (helm-projectile-on))
+  (projectile-mode 1)
+  (helm-projectile-on)
+  (define-key global-map (kbd "C-c p") 'projectile-command-map))
 
 (use-package undo-tree
   :config
